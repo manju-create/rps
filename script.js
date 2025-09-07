@@ -40,14 +40,20 @@ function playRound() {
 }
 
 function playGame() {
-  for (let i = 0; i < 2; i++) {
+  {
     playRound();
   }
 
 
   console.log("Final Scores → Human:", humanScore, "Computer:", computerScore);
-
-  
 }
+
+const rock=document.getElementById("rock");
+const paper=document.getElementById("paper");
+const scissors=document.getElementById("scissors");
+
+rock.addEventListener("click",playRound);
+paper.addEventListener("click",playRound);
+scissors.addEventListener("click",playRound);
 
 playGame();
